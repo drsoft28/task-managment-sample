@@ -1,0 +1,14 @@
++--------+-----------+-------------------+---------------+---------------------------------------------+------------+
+| Domain | Method    | URI               | Name          | Action                                      | Middleware |
++--------+-----------+-------------------+---------------+---------------------------------------------+------------+
+|        | GET|HEAD  | /                 |               | App\Http\Controllers\TaskController@index   | web        |
+|        | GET|HEAD  | api/user          |               | Closure                                     | api        |
+|        |           |                   |               |                                             | auth:api   |
+|        | GET|HEAD  | tasks             | tasks.index   | App\Http\Controllers\TaskController@index   | web        |
+|        | POST      | tasks             | tasks.store   | App\Http\Controllers\TaskController@store   | web        |
+|        | GET|HEAD  | tasks/create      | tasks.create  | App\Http\Controllers\TaskController@create  | web        |
+|        | GET|HEAD  | tasks/{task}      | tasks.show    | App\Http\Controllers\TaskController@show    | web        |
+|        | PUT|PATCH | tasks/{task}      | tasks.update  | App\Http\Controllers\TaskController@update  | web        |
+|        | DELETE    | tasks/{task}      | tasks.destroy | App\Http\Controllers\TaskController@destroy | web        |
+|        | GET|HEAD  | tasks/{task}/edit | tasks.edit    | App\Http\Controllers\TaskController@edit    | web        |
++--------+-----------+-------------------+---------------+---------------------------------------------+------------+
